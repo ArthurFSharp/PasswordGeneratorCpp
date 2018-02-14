@@ -1,0 +1,58 @@
+﻿<Page
+    x:Class="PasswordGenerator_Uwp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PasswordGenerator_Uwp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- extended title view -->
+        <StackPanel Grid.Row="0"
+                    Padding="10"
+                    Background="{ThemeResource InkToolbarAccentColorThemeBrush}">
+            <TextBlock x:Uid="AppTitle"
+                       FontWeight="Bold"
+                       VerticalAlignment="Bottom"
+                       Style="{ThemeResource CaptionTextBlockStyle}" />
+        </StackPanel>
+
+        <!-- Content -->
+        <StackPanel Grid.Row="1"
+                    Padding="10">
+            <TextBox x:Uid="PasswordValue"
+                     Margin="0, 5, 0, 10"
+                     FocusVisualPrimaryBrush="{ThemeResource SystemControlBackgroundAltMediumBrush}" />
+
+            <Slider x:Uid="PasswordLength"
+                    Maximum="50"
+                    Minimum="1"
+                    Value="10" />
+            <StackPanel Padding="3, 0, 3, 6">
+                <TextBlock x:Uid="OptionsTextBlock" />
+                <ToggleSwitch x:Uid="OptionNumberToggle"
+                              Padding="2" />
+                <ToggleSwitch x:Uid="OptionLetterToggle"
+                              Padding="2" />
+                <ToggleSwitch x:Uid="OptionSymbolToggle"
+                              Padding="2" />
+                <ToggleSwitch x:Uid="OptionDuplicateToggle"
+                              Padding="2" />
+            </StackPanel>
+            <StackPanel Padding="0, 5, 0, 10">
+                <Button x:Uid="GenerateButton"
+                        HorizontalAlignment="Stretch"
+                        Margin="0, 2, 0, 2" />
+                <Button x:Uid="ClipboardButton"
+                        HorizontalAlignment="Stretch"
+                        Margin="0, 2, 0, 2" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
