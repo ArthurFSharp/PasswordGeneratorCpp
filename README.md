@@ -1,2 +1,2 @@
 # PasswordGeneratorCpp
-UWP Application for generate password with parameters
+UWP Application for generate password with parameters (C++ / XAML)
